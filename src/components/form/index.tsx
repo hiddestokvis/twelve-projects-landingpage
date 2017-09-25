@@ -30,8 +30,10 @@ type FormProps = StateProps & DispatchProps & OwnProps;
 class Form extends React.Component<FormProps, {}> {
   state: {
     _valid: boolean;
+    _send: boolean;
   } = {
     _valid: false,
+    _send: false,
   };
 
   constructor() {
@@ -48,6 +50,9 @@ class Form extends React.Component<FormProps, {}> {
   */
   sendPitch(event: React.SyntheticEvent<HTMLInputElement>) {
     // Start submitting pitch
+    this.setState({
+      _send: false,
+    });
     this.props.dispatch(PitchActions.submit());
     fetch(`${API_URL}/api/v1/pitches`, {
       method: 'POST',
@@ -65,6 +70,9 @@ class Form extends React.Component<FormProps, {}> {
     })
     .then((response) => {
       // Pitch submitted succesfully
+      this.setState({
+        _send: true,
+      });
       this.props.dispatch(PitchActions.succeed());
     })
     .catch((/*error*/) => {
@@ -219,6 +227,9 @@ class Form extends React.Component<FormProps, {}> {
                 handleChange={this.handleChange}
                 value={get(this.props.pitch, 'item.acceptTerms') as boolean}
               />
+              { (this.state._send) && (
+                <Alert color="success">Je pitch is verzonden! Je ontvangt een e-mailtje ter bevestiging :)</Alert>
+              ) }
               <Button
                 color="success"
                 onClick={this.sendPitch}
