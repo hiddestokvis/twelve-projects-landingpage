@@ -143,6 +143,7 @@ class Form extends React.Component<FormProps, {}> {
       <div className="form">
         <div className="form-container">
           <h1>Pitch it!</h1>
+          <h2><a href="/12projects_guidelines.pdf" target="_blank">Check de guidelines!</a></h2>
           <ScrollableAnchor id="pitch-form">
             <div className="form-group">
               { (this.state._valid && this.props.pitch && this.props.pitch.failed) && (
@@ -222,7 +223,7 @@ class Form extends React.Component<FormProps, {}> {
               />
               <br />
               <FormCheckbox
-                placeholder="Ik heb de voorwaarden gelezen en wil mijn pitch insturen met kans dat deze gekozen wordt"
+                placeholder="Ik heb de %voorwaarden% gelezen en wil mijn pitch insturen met kans dat deze gekozen wordt"
                 name="item.acceptTerms"
                 handleChange={this.handleChange}
                 value={get(this.props.pitch, 'item.acceptTerms') as boolean}

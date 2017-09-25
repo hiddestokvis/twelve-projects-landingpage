@@ -28,7 +28,8 @@ export class FormCheckbox extends React.Component<CheckboxProps, {}> {
             value={(String(this.props.value) === 'true') ? 'false' : 'true'}
             type="checkbox"
             checked={String(this.props.value) === 'true'}
-          /> {this.props.placeholder}
+          /> Ik heb de <a href="/12projects_voorwaarden.pdf" target="_blank">voorwaarden</a> gelezen en wil 
+          mijn pitch insturen met kans dat deze gekozen wordt
         </Label>
       </FormGroup>
     );
