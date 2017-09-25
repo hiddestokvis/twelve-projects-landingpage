@@ -1,0 +1,56 @@
+.introduction {
+  width: 100%;
+  position: relative;
+}
+.introduction::after {
+  content: '';
+  clear: both;
+}
+.introduction .hallo {
+  margin: 3% 0 3% 7%;
+  width: 35%;
+}
+.introduction .hallo h1 {
+  color: #ffca3d;
+  font-family: 'Noto Serif', serif;
+  font-size: 105px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+.introduction .hallo p {
+  color: #353535;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+.introduction .video {
+  background: #f2f2f2;
+  width: 55%;
+  max-width: 800px;
+  height: 0;
+  padding-top: 25px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.introduction .video iframe {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 900px) {
+  .introduction .video {
+    display: none;
+  }
+  .introduction .hallo {
+    width: 65%;
+  }
+}
+@media only screen and (max-device-width: 667px)  {
+  .introduction .hallo {
+    width: 86%;
+  }
+}

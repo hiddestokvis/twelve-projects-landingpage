@@ -1,0 +1,39 @@
+.slot-header {
+  width: 93%;
+  margin: 6% 0 3% 7%;
+  position: relative;
+  overflow: hidden;
+}
+.slot-header h1 {
+  color: #225fe9;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+  margin: 0 0 20px 0;
+}
+.slot-header p {
+  color: #353535;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+.slot-header time {
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 105px;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+  width: 300%;
+  text-align: right;
+}
+@media only screen and (max-device-width: 667px)  {
+  .slot-header {
+    width: 84%;
+  }
+  .slot-header time {
+    display: none;
+  }
+}

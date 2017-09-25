@@ -1,0 +1,47 @@
+.how {
+  margin: 5% 0;
+  position: relative;
+}
+.how h1 {
+  color: #ffca3d;
+  font-family: 'Noto Serif', serif;
+  font-size: 85px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  margin: 0 0 0 3%;
+  position: absolute;
+  top: 0;
+  width: 30%;
+  left: 55%;
+}
+.how .video {
+  background: #f2f2f2;
+  width: 55%;
+  max-width: 800px;
+  height: 0;
+  padding-top: 25px;
+  position: relative;
+}
+.how .video iframe {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 1100px) {
+  .how h1 {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .how h1 {
+    display: none;
+  }
+}
+@media only screen and (max-device-width: 667px)  {
+  .how .video {
+    width: 100%;
+    margin-bottom: 15%;
+  }
+}

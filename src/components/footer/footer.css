@@ -1,0 +1,47 @@
+.footer {
+  width: 88%;
+  margin: 15% 5% 5% 7%;
+}
+.footer::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.footer-main {
+  width: 70%;
+  float: left;
+}
+.footer-main h1 {
+  color: #92d400;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Noto Serif', serif;
+}
+.footer-main a {
+  font-family: 'Lato', sans-serif !important;
+  color: #225fe9 !important;
+  font-weight: 300;
+}
+.footer-social {
+  width: 30%;
+  float: right;
+  text-align: right;
+}
+.footer-socal a {
+  font-family: 'Noto Serif', serif;
+  font-weight: normal;
+}
+.footer-social a.instagram {
+  color: #57e594 !important;
+}
+.footer-social a.facebook {
+  color: #225fe9 !important;
+}
+.footer-social a.linkedin {
+  color: #ffca3d !important;
+}
+@media only screen and (max-device-width: 667px)  {
+  .footer .footer-main h1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,24 @@
+.slots-container {
+  width: 93%;
+  position: relative;
+  min-height: 200px;
+  margin: 3% 0;
+}
+.slots-container .slots-background {
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  background: #f9f9f9;
+  width: 100%;
+}
+.slots-container .slots-list {
+  position: relative;
+  margin: 0 3% 0 7%;
+  z-index: 999;
+  width: 90%;
+}
+.slots-container .slots-list::after {
+  clear: both;
+  content: '';
+  display: block;
+}
