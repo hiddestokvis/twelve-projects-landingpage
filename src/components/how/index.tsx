@@ -8,8 +8,10 @@ type HowProps = OwnProps;
 export default class How extends React.Component<HowProps, {}> {
   state: {
     videoHeight: number;
+    left: number;
   } = {
     videoHeight: 0,
+    left: 0,
   };
   constructor() {
     super();
@@ -27,6 +29,7 @@ export default class How extends React.Component<HowProps, {}> {
       width = Math.min(width, 800);
       this.setState({
         videoHeight: width * 0.5626,
+        left: width,
       });
     }
   }
@@ -47,7 +50,9 @@ export default class How extends React.Component<HowProps, {}> {
             frameBorder="0"
           />
         </div>
-        <h1>Dit is<br/>hoe<br/>het<br/>werkt</h1>
+        <h1 style={{
+          left: this.state.left,
+        }}>Dit is<br/>hoe<br/>het<br/>werkt</h1>
       </div>
     );
   }
