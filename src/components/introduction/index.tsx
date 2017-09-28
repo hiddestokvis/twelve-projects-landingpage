@@ -41,6 +41,10 @@ export default class Introduction extends React.Component<IntroductionProps, {}>
           <p>Wij zijn Hidde &amp; Boyan, samen zijn wij opzoek naar twaalf kickass projecten,
           die wij voor de juiste prijs willen realiseren.
           Dit is jouw kans om jouw droomproject van de grond te krijgen!</p>
+          <p>
+            <a href="https://www.linkedin.com/in/hiddestokvis/" target="_blank">- Bekijk Hidde's LinkedIn</a><br />
+            <a href="https://www.linkedin.com/in/boyan-lamboo-503b22a8/" target="_blank">- Bekijk Boyan's LinkedIn</a>
+          </p>
         </div>
         <div
           className="video"
