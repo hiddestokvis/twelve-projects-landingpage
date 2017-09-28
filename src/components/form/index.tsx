@@ -16,6 +16,10 @@ import { PitchActions } from '../../redux/actions/pitch.actions';
 import { isTrue, isNotEmpty, isValidPostalCode, isValidPhoneNumber } from '../../utils/validate';
 import './form.css';
 
+// tslint:disable
+declare const fbq: any;
+// tslint:enable
+
 interface StateProps {
   slots?: SlotState;
   pitch?: PitchState;
@@ -73,6 +77,7 @@ class Form extends React.Component<FormProps, {}> {
       this.setState({
         _send: true,
       });
+      fbq('track', 'CompleteRegistration');
       this.props.dispatch(PitchActions.succeed());
     })
     .catch((/*error*/) => {
@@ -147,7 +152,8 @@ class Form extends React.Component<FormProps, {}> {
           <ScrollableAnchor id="pitch-form">
             <div className="form-group">
               { (this.state._valid && this.props.pitch && this.props.pitch.failed) && (
-                <Alert color="danger">Er ging iets mis bij het versturen. Je kan maar 1 x pitchen op het gratis slot en 1 x op een ander slot.</Alert>
+                <Alert color="danger">Er ging iets mis bij het versturen. Je kan maar 1 x pitchen op het gratis slot
+                en 1 x op een ander slot.</Alert>
               ) }
               <FormInput
                 placeholder="Voornaam"

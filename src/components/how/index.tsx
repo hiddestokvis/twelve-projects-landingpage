@@ -50,9 +50,13 @@ export default class How extends React.Component<HowProps, {}> {
             frameBorder="0"
           />
         </div>
-        <h1 style={{
-          left: this.state.left,
-        }}>Dit is<br/>hoe<br/>het<br/>werkt</h1>
+        <h1
+          style={{
+            left: this.state.left,
+          }}
+        >
+          Dit is<br/>hoe<br/>het<br/>werkt
+        </h1>
       </div>
     );
   }
