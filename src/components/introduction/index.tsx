@@ -24,7 +24,7 @@ export default class Introduction extends React.Component<IntroductionProps, {}>
   getVideoHeight() {
     let width: number | undefined = $(window).width();
     if (width) {
-      if (width < 300) {
+      if (width > 400) {
         width = Math.min(width * .55, 800);
       }
       this.setState({
