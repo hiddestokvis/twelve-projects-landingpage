@@ -8,6 +8,7 @@ import { default as Introduction } from './components/introduction';
 import { default as Slots } from './components/slots';
 import { default as How } from './components/how';
 import { default as Footer } from './components/footer';
+import { default as Portfolio } from './components/portfolio';
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
           {/* MAIN PAGE */}
           <Header />
           <Introduction />
+          <Portfolio />
           <Slots />
           <How />
           <Form />
