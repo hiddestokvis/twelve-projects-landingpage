@@ -43,7 +43,9 @@
 }
 @media screen and (max-width: 900px) {
   .introduction .video {
-    display: none;
+    display: block;
+    position: relative;
+    width: 100% !important;
   }
   .introduction .hallo {
     width: 65%;
